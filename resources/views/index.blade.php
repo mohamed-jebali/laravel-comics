@@ -3,7 +3,5 @@
 @section('title', 'DC Comics')
 
 @section('main-content')
-    <h1>
-       Main
-    </h1>
+     @include('partials.content')
 @endsection

@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $headerList = config('db.headerList');
-    return view('index',compact('headerList'));
+    $listComics = config('db.listComics');
+    return view('index',compact('headerList','listComics'));
 })->name('index');
