@@ -1,1 +1,46 @@
+
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
 @import "~bootstrap/scss/bootstrap";
+
+header{
+    @include flex(row,space-between);
+    height: 90px;
+
+    .container{
+        max-width: 1000px;
+    }
+    
+    .brand{
+    
+        img{
+            height: 60px
+        }
+    }
+        
+    
+    ul{
+        height: 100%;
+        li{
+            @include flex();
+            margin-right: 1.5rem;
+            font-size: 0.65rem;
+            font-weight: 600;
+            height: 100%;
+    
+            &:hover{
+                text-decoration: underline;
+            }
+            a{
+                text-decoration: none;
+                color: $DcNavColor;
+            }
+        }
+        li:nth-child(2){
+                color: $DcColorBlue;
+            }
+            .activeColor{
+                border-bottom: 4px solid $DcColorBlue ;
+            }
+    }
+}
